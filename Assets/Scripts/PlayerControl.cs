@@ -22,7 +22,6 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(rb.velocity);
         anime.SetFloat("speed", 0);
         Vector2 v = rb.velocity;
         if (Input.GetKey(KeyCode.D))
