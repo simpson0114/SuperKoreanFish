@@ -8,6 +8,10 @@ public class PlayerControl : MonoBehaviour {
     private Animator anime;
     private bool isGrounded;
 
+    [Header("Audio Setting")]
+    public AudioSource audioSource;
+    public AudioClip jumpEffect;
+
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
@@ -18,15 +22,18 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(rb.velocity);
         anime.SetFloat("speed", 0);
         Vector2 v = rb.velocity;
         if (Input.GetKey(KeyCode.D))
         {
+            transform.eulerAngles = new Vector3(0, 180, 0);
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 400, v.y);
             anime.SetFloat("speed", rb.velocity.x);
         }
         else if(Input.GetKey(KeyCode.A))
         {
+            transform.eulerAngles = new Vector3(0, 0, 0);
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 400, v.y);
             anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         }
@@ -43,11 +50,15 @@ public class PlayerControl : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        Debug.Log(c.collider.tag);
         if (c.collider.tag == "Ground")
         {
             isGrounded = true;
             anime.SetBool("isJump", false);
         }
+    }
+
+    void JumpEffect()
+    {
+        audioSource.PlayOneShot(jumpEffect);
     }
 }
