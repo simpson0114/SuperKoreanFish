@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour {
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 400, v.y);
-            anime.SetFloat("speed", rb.velocity.x);
+            anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         }
         else if(Input.GetKey(KeyCode.A))
         {
@@ -37,14 +37,13 @@ public class PlayerControl : MonoBehaviour {
             anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKey(KeyCode.W) && isGrounded)
         {
             isGrounded = false;
             rb.velocity += new Vector2(0, 5);
             anime.SetBool("isJump", true);
         }
 
-        
     }
 
     void OnCollisionEnter2D(Collision2D c)
