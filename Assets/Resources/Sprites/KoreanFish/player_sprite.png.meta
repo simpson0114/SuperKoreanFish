@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 69b625fa0ccda8246a8f78f5426d5714
-timeCreated: 1576051130
+guid: 7a50ffce9dd21514e8e3413f9f159813
+timeCreated: 1576547942
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: player_sprite_0
-    21300002: idle01
-    21300004: idle02
-    21300006: walk
-    21300008: jump
+    21300000: idle01
+    21300002: idle02
+    21300004: walk
+    21300006: jump
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -51,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -88,12 +87,12 @@ TextureImporter:
       name: idle01
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 2
+        y: 2
         width: 35
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -102,12 +101,12 @@ TextureImporter:
       name: idle02
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 35
+        x: 41
+        y: 1
+        width: 37
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -116,12 +115,12 @@ TextureImporter:
       name: walk
       rect:
         serializedVersion: 2
-        x: 70
-        y: 0
+        x: 80
+        y: 1
         width: 35
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +129,12 @@ TextureImporter:
       name: jump
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 35
+        x: 118
+        y: 1
+        width: 33
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
