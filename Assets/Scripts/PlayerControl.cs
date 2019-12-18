@@ -42,6 +42,7 @@ public class PlayerControl : MonoBehaviour {
             isGrounded = false;
             rb.velocity += new Vector2(0, 5);
             anime.SetBool("isJump", true);
+            audioSource.PlayOneShot(jumpEffect);
         }
 
     }
@@ -53,10 +54,5 @@ public class PlayerControl : MonoBehaviour {
             isGrounded = true;
             anime.SetBool("isJump", false);
         }
-    }
-
-    void JumpEffect()
-    {
-        audioSource.PlayOneShot(jumpEffect);
     }
 }
