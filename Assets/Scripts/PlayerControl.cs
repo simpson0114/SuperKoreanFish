@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
     [Header("Audio Setting")]
     public AudioSource audioSource;
     public AudioClip jumpEffect;
+    public AudioClip fallEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +45,9 @@ public class PlayerControl : MonoBehaviour {
             anime.SetBool("isJump", true);
             audioSource.PlayOneShot(jumpEffect);
         }
+
+        if (transform.position.y <= -3.5)
+            audioSource.PlayOneShot(fallEffect);
     }
 
     void OnCollisionEnter2D(Collision2D c)

@@ -5398,6 +5398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2030888258}
   jumpEffect: {fileID: 8300000, guid: 6c0fa04efe89291429187d72f793c61d, type: 3}
+  fallEffect: {fileID: 8300000, guid: afe634b1a2e7a77479d82f5ae9668f56, type: 3}
 --- !u!1 &1479659144
 GameObject:
   m_ObjectHideFlags: 0
