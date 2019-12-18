@@ -11,12 +11,7 @@ public class MainCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 pos = player.localPosition;
-        pos.y += 1.13f;
-        pos.z = -10;
-        if (pos.y < 0)
-            pos.y = 0;
-        transform.localPosition = pos;
+        transform.localPosition = new Vector3(player.position.x, -0.35f, -10);
 
     }
 }
