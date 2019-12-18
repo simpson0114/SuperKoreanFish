@@ -16,7 +16,6 @@ public class PlayerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
-        
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
 	}
@@ -47,7 +46,7 @@ public class PlayerControl : MonoBehaviour {
         }
 
         if (transform.position.y <= -3.5)
-            audioSource.PlayOneShot(fallEffect);
+            audioSource.PlayOneShot(fallEffect, 0.5f);
     }
 
     void OnCollisionEnter2D(Collision2D c)
