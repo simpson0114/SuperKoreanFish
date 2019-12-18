@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
-
+        
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
 	}
@@ -27,13 +27,13 @@ public class PlayerControl : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 400, v.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
             anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         }
         else if(Input.GetKey(KeyCode.A))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 400, v.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
             anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
         }
 
@@ -44,7 +44,6 @@ public class PlayerControl : MonoBehaviour {
             anime.SetBool("isJump", true);
             audioSource.PlayOneShot(jumpEffect);
         }
-
     }
 
     void OnCollisionEnter2D(Collision2D c)
