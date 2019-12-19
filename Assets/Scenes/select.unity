@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 458202516}
   - component: {fileID: 458202519}
   - component: {fileID: 458202518}
+  - component: {fileID: 458202520}
   - component: {fileID: 458202517}
   m_Layer: 5
   m_Name: Taipei
@@ -224,6 +225,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 458202515}
+--- !u!114 &458202520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 458202515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 
 --- !u!1 &538457297
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +321,7 @@ GameObject:
   - component: {fileID: 854873289}
   - component: {fileID: 854873292}
   - component: {fileID: 854873291}
+  - component: {fileID: 854873293}
   - component: {fileID: 854873290}
   m_Layer: 5
   m_Name: Tainan
@@ -409,6 +423,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854873288}
+--- !u!114 &854873293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854873288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: menu
 --- !u!1 &897877658
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +593,7 @@ GameObject:
   - component: {fileID: 1237573726}
   - component: {fileID: 1237573729}
   - component: {fileID: 1237573728}
+  - component: {fileID: 1237573730}
   - component: {fileID: 1237573727}
   m_Layer: 5
   m_Name: Kaohsiung
@@ -668,6 +695,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1237573725}
+--- !u!114 &1237573730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237573725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: game
 --- !u!1 &1351571323
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +969,7 @@ GameObject:
   - component: {fileID: 1726738395}
   - component: {fileID: 1726738398}
   - component: {fileID: 1726738397}
+  - component: {fileID: 1726738399}
   - component: {fileID: 1726738396}
   m_Layer: 5
   m_Name: Taichung
@@ -1031,6 +1071,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1726738394}
+--- !u!114 &1726738399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726738394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 
 --- !u!1 &1797204785
 GameObject:
   m_ObjectHideFlags: 0
