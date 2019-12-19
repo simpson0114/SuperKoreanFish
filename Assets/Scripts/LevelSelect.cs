@@ -10,7 +10,10 @@ public class LevelSelect : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData e)
     {
-        SceneManager.LoadScene(SceneName);
+        if (SceneName == "quit")
+            Application.Quit();
+        else
+            SceneManager.LoadScene(SceneName);
     }
 
 	// Use this for initialization
