@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game.unity
     guid: 15219c5cc6af3544198f27cdac7c20ab
+  - enabled: 1
+    path: Assets/Scenes/Tainan.unity
+    guid: 51a10fe7f642e0c4a83955d488102a3f
