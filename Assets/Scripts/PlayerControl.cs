@@ -22,19 +22,19 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        anime.SetFloat("speed", 0);
+        anime.SetBool("isMove", false);
         Vector2 v = rb.velocity;
         if (Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
-            anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+            anime.SetBool("isMove", true);
         }
         else if(Input.GetKey(KeyCode.A))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
-            anime.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+            anime.SetBool("isMove", true);
         }
 
         if (Input.GetKey(KeyCode.W) && isGrounded)
