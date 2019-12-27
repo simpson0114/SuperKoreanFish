@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class FlagRaise : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public float stepSize;
+    bool raised;
+    Vector3 target = new Vector3(67.49f, 1.15f, 0);
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
+        raised = false;
+    }
 
-	}
+    // Update is called once per frame
+    void Update() {
+        if (raised && transform.position.y <= 1.15)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, stepSize * Time.deltaTime);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.tag == "Player")
-            transform.Translate(Vector3.up * Time.deltaTime);
+            raised = true;
     }
 }
