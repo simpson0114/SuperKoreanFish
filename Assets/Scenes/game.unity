@@ -8859,6 +8859,11 @@ Prefab:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 2030888258}
+    - target: {fileID: 114085480768865862, guid: 1b9abe87c40986d4581bdc6410a620d1,
+        type: 2}
+      propertyPath: fallEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: afe634b1a2e7a77479d82f5ae9668f56, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b9abe87c40986d4581bdc6410a620d1, type: 2}
   m_IsPrefabParent: 0

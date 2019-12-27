@@ -13,11 +13,15 @@ public class PlayerControl : MonoBehaviour {
     public AudioClip jumpEffect;
     public AudioClip fallEffect;
 
+    bool playOnce;
+
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
+
+        playOnce = true;
 	}
 	
 	// Update is called once per frame
@@ -45,8 +49,11 @@ public class PlayerControl : MonoBehaviour {
             audioSource.PlayOneShot(jumpEffect);
         }
 
-        if (transform.position.y <= -3.5)
+        if (transform.position.y <= -3.5 && playOnce)
+        {
             audioSource.PlayOneShot(fallEffect, 0.5f);
+            playOnce = false;
+        }
     }
     void OnCollisionEnter2D(Collision2D c)
     {
