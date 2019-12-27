@@ -10,6 +10,10 @@ public class PauseButton : MonoBehaviour, IPointerClickHandler {
     public void OnPointerClick(PointerEventData e)
     {
         pause.SetActive(!pause.activeSelf);
+        if (pause.activeSelf)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 
 	// Use this for initialization

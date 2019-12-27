@@ -48,13 +48,21 @@ public class PlayerControl : MonoBehaviour {
         if (transform.position.y <= -3.5)
             audioSource.PlayOneShot(fallEffect, 0.5f);
     }
-
     void OnCollisionEnter2D(Collision2D c)
     {
         if (c.collider.tag == "Ground")
         {
             isGrounded = true;
             anime.SetBool("isJump", false);
+        }
+    }
+    
+    void OnCollisionExit2D(Collision2D c)
+    {
+        if (c.collider.tag == "Ground")
+        {
+            isGrounded = false;
+            anime.SetBool("isJump", true);
         }
     }
 }

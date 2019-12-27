@@ -23,6 +23,12 @@ public class BackgroundMove : MonoBehaviour {
         rb.velocity = new Vector3(velocity, 0, 0);
 
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             pause.SetActive(!pause.activeSelf);
+            if (pause.activeSelf)
+                Time.timeScale = 0;
+            else
+                Time.timeScale = 1;
+        }
 	}
 }

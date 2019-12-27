@@ -6,7 +6,7 @@ public class FlagRaise : MonoBehaviour {
 
     public float stepSize;
     bool raised;
-    Vector3 target = new Vector3(67.49f, 1.15f, 0);
+    Vector3 target = new Vector3(67.1476f, 1.15f, 0);
 
     // Use this for initialization
     void Start() {
