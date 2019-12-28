@@ -18,6 +18,7 @@ public class LevelSelect : MonoBehaviour, IPointerClickHandler {
             Application.Quit();
         else
         {
+            Time.timeScale = 1;
             StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, SceneName));
         }
     }
