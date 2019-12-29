@@ -5090,7 +5090,7 @@ EdgeCollider2D:
   - {x: 1.001352, y: -2.2478786}
   - {x: 1.2686923, y: -2.2682133}
   - {x: 1.2720172, y: -3.521571}
-  - {x: 8.016127, y: -3.5198119}
+  - {x: 8.00193, y: -3.5103474}
   - {x: 7.9932756, y: -2.2336652}
   - {x: 9.217791, y: -2.2683585}
   - {x: 9.250131, y: -2.5433424}
@@ -5111,7 +5111,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 13.281412, y: -2.7213368}
