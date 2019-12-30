@@ -9,8 +9,16 @@ public class UsageCase : MonoBehaviour
     private ES_MessageSystem msgSys;
     public UnityEngine.UI.Text uiText;
     public TextAsset textAsset;
+    public bool triggerd;
+    public GameObject messagePanel;
+
     private List<string> textList = new List<string>();
     private int textIndex = 0;
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        triggerd = true;
+    }
 
     void Start()
     {
@@ -21,6 +29,9 @@ public class UsageCase : MonoBehaviour
         }
         else
             ReadTextDataFromAsset(textAsset);
+
+        triggerd = false;
+        messagePanel.SetActive(false);
 
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
@@ -45,6 +56,10 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
+        if (!triggerd)
+            return;
+
+        messagePanel.SetActive(true);
         if (Input.GetKeyDown(KeyCode.S))
         {
             //You can sending the messages from strings or text-based files.
