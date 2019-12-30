@@ -8949,7 +8949,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4065099592153386, guid: 1b9abe87c40986d4581bdc6410a620d1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.046
+      value: 0.653
       objectReference: {fileID: 0}
     - target: {fileID: 4065099592153386, guid: 1b9abe87c40986d4581bdc6410a620d1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9037,6 +9037,11 @@ Prefab:
       propertyPath: messagePanel
       value: 
       objectReference: {fileID: 1749503795}
+    - target: {fileID: 114476782542918374, guid: 2f2b4fb6568dd6b40af82d8071e2b5fc,
+        type: 2}
+      propertyPath: textAsset
+      value: 
+      objectReference: {fileID: 4900000, guid: d86bac1a86adfc146868d0ac005cd8fe, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f2b4fb6568dd6b40af82d8071e2b5fc, type: 2}
   m_IsPrefabParent: 0
@@ -9524,6 +9529,17 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 857.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752803696074110, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 3f830cd747e044b4f801deca4cdeede1,
+        type: 3}
+    - target: {fileID: 114752803696074110, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c5648ca85f7a5442ae80ce37b4b6200, type: 2}

@@ -10,6 +10,7 @@ public class UsageCase : MonoBehaviour
     public UnityEngine.UI.Text uiText;
     public TextAsset textAsset;
     public bool triggerd;
+    bool once;
     public GameObject messagePanel;
 
     private List<string> textList = new List<string>();
@@ -31,16 +32,24 @@ public class UsageCase : MonoBehaviour
             ReadTextDataFromAsset(textAsset);
 
         triggerd = false;
+        once = true;
         messagePanel.SetActive(false);
 
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
+        msgSys.AddSpecialCharToFuncMap("tmp", tmp);
     }
 
     private void CustomizedFunction()
     {
         Debug.Log("Hi! This is called by CustomizedFunction!");
     }
+
+    void tmp()
+    {
+        Debug.Log("show up");
+    }
+
 
     private void ReadTextDataFromAsset(TextAsset _textAsset)
     {
@@ -56,8 +65,11 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
-        if (!triggerd)
+        if (!triggerd && once)
+        {
+            once = false;
             return;
+        }
 
         messagePanel.SetActive(true);
         if (Input.GetKeyDown(KeyCode.S))
@@ -86,6 +98,10 @@ public class UsageCase : MonoBehaviour
         {
             msgSys.SetText(textList[textIndex]);
             textIndex++;
+        }
+        else if (msgSys.IsCompleted == true)
+        {
+            messagePanel.SetActive(false);
         }
     }
 }
