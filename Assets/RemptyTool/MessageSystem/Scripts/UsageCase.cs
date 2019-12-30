@@ -10,7 +10,6 @@ public class UsageCase : MonoBehaviour
     public UnityEngine.UI.Text uiText;
     public TextAsset textAsset;
     public bool triggerd;
-    bool once;
     public GameObject messagePanel;
 
     private List<string> textList = new List<string>();
@@ -18,7 +17,8 @@ public class UsageCase : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c)
     {
-        triggerd = true;
+        if (c.tag == "Player")
+            triggerd = true;
     }
 
     void Start()
@@ -32,7 +32,6 @@ public class UsageCase : MonoBehaviour
             ReadTextDataFromAsset(textAsset);
 
         triggerd = false;
-        once = true;
         messagePanel.SetActive(false);
 
         //add special chars and functions in other component.
@@ -65,11 +64,8 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
-        if (!triggerd && once)
-        {
-            once = false;
+        if (!triggerd)
             return;
-        }
 
         messagePanel.SetActive(true);
         if (Input.GetKeyDown(KeyCode.S))

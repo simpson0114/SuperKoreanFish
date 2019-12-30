@@ -11,17 +11,12 @@ public class PlayerControl : MonoBehaviour {
     [Header("Audio Setting")]
     public AudioSource audioSource;
     public AudioClip jumpEffect;
-    public AudioClip fallEffect;
-
-    bool playOnce;
 
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
-
-        playOnce = true;
 	}
 	
 	// Update is called once per frame
@@ -48,12 +43,6 @@ public class PlayerControl : MonoBehaviour {
             anime.SetBool("isJump", true);
             audioSource.PlayOneShot(jumpEffect);
         }
-
-        if (transform.position.y <= -3.5 && playOnce)
-        {
-            audioSource.PlayOneShot(fallEffect, 0.5f);
-            playOnce = false;
-        }
     }
     void OnCollisionEnter2D(Collision2D c)
     {
@@ -61,6 +50,12 @@ public class PlayerControl : MonoBehaviour {
         {
             isGrounded = true;
             anime.SetBool("isJump", false);
+        }
+        else if (c.collider.tag == "Enemy" && rb.velocity.y < 0 && !isGrounded)
+        {
+            isGrounded = true;
+            anime.SetBool("isJump", false);
+            c.collider.gameObject.GetComponent<EnemyControl>().attacked();
         }
     }
     
