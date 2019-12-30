@@ -9624,7 +9624,52 @@ Prefab:
     - target: {fileID: 224854204666836320, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -448
+      value: -381
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 178.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1319.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.47336996
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4733698
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.4733698
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 306.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c5648ca85f7a5442ae80ce37b4b6200, type: 2}
