@@ -6,6 +6,7 @@ public class FlagRaise : MonoBehaviour {
 
     public float stepSize;
     bool raised;
+    bool once;
     Vector3 target = new Vector3(67.1476f, 1.15f, 0);
 
     FadeEffect effect;
@@ -13,6 +14,7 @@ public class FlagRaise : MonoBehaviour {
     // Use this for initialization
     void Start() {
         raised = false;
+        once = false;
 
         effect = GameObject.Find("fade").GetComponent<FadeEffect>();
     }
@@ -21,10 +23,17 @@ public class FlagRaise : MonoBehaviour {
     void Update() {
         if (raised && transform.position.y <= 1.15)
         {
+            if (transform.position.y >= 1.14)
+            {
+                once = true;
+            }
             transform.position = Vector3.MoveTowards(transform.position, target, stepSize * Time.deltaTime);
+           
         }
-        else if (transform.position.y >= 1.15)
+
+        if (once)
         {
+            once = false;
             StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "select"));
         }
     }
