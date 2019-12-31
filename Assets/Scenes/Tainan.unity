@@ -226,6 +226,8 @@ GameObject:
   m_Component:
   - component: {fileID: 159551151}
   - component: {fileID: 159551150}
+  - component: {fileID: 159551154}
+  - component: {fileID: 159551153}
   - component: {fileID: 159551152}
   m_Layer: 0
   m_Name: "\u529F\u529F"
@@ -303,7 +305,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12567055, y: -0.05656588}
+  m_Offset: {x: -2.142899, y: -0.38534403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -314,8 +316,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.724632, y: 2.2666051}
+  m_Size: {x: 1.5804838, y: 1.6090488}
   m_EdgeRadius: 0
+--- !u!114 &159551153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159551149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ca1bef38466fa4bbd2e8131b83a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.01
+--- !u!114 &159551154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159551149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc3c18c220b48044980c32f49f0275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 592514780}
+  textAsset: {fileID: 4900000, guid: 650274cbf5d0ea245b5bd03aa5f5082b, type: 3}
+  triggerd: 0
+  messagePanel: {fileID: 135605022}
 --- !u!1 &429842624
 GameObject:
   m_ObjectHideFlags: 0

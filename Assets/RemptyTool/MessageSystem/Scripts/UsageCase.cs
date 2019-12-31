@@ -37,6 +37,9 @@ public class UsageCase : MonoBehaviour
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
+        msgSys.AddSpecialCharToFuncMap("hide", hide);
+        msgSys.AddSpecialCharToFuncMap("show", show);
+        msgSys.AddSpecialCharToFuncMap("rst", reset);
     }
 
     private void CustomizedFunction()
@@ -44,9 +47,28 @@ public class UsageCase : MonoBehaviour
         Debug.Log("Hi! This is called by CustomizedFunction!");
     }
 
+    void reset()
+    {
+        uiText.text = "";
+        textList.Clear();
+        textIndex = 0;
+        Start();
+    }
+
     void tmp()
     {
         Debug.Log("show up");
+    }
+
+    void hide()
+    {
+        messagePanel.SetActive(false);
+    }
+
+    void show()
+    {
+        Debug.Log("show");
+        messagePanel.SetActive(true);
     }
 
 
@@ -64,10 +86,6 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
-        if (!triggerd)
-            return;
-
-        messagePanel.SetActive(true);
         if (Input.GetKeyDown(KeyCode.S))
         {
             //You can sending the messages from strings or text-based files.
@@ -97,7 +115,7 @@ public class UsageCase : MonoBehaviour
         }
         else if (msgSys.IsCompleted == true)
         {
-            messagePanel.SetActive(false);
+
         }
     }
 }
