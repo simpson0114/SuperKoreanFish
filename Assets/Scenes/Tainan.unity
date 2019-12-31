@@ -493,6 +493,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114545116965365348, guid: 3818123f56c299a4885e7a40473c4c41,
+        type: 2}
+      propertyPath: gamePausePanel
+      value: 
+      objectReference: {fileID: 1126988037}
+    - target: {fileID: 114545116965365348, guid: 3818123f56c299a4885e7a40473c4c41,
+        type: 2}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1553208288}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3818123f56c299a4885e7a40473c4c41, type: 2}
   m_IsPrefabParent: 0
