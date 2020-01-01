@@ -25,7 +25,7 @@ public class FadeEffect : MonoBehaviour
     
     #endregion
     #region FADE
-    public IEnumerator Fade(FadeDirection fadeDirection)
+    private IEnumerator Fade(FadeDirection fadeDirection)
     {
         float alpha = (fadeDirection == FadeDirection.Out) ? 1 : 0;
         float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 0 : 1;

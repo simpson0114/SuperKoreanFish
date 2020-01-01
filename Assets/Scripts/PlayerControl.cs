@@ -12,31 +12,17 @@ public class PlayerControl : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip jumpEffect;
 
-    bool freeze;
-
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
-
-        freeze = false;
 	}
 	
-    public void setFreeze(bool ipt)
-    {
-        freeze = ipt;
-    }
-
 	// Update is called once per frame
 	void Update () {
         anime.SetBool("isMove", false);
         Vector2 v = rb.velocity;
-
-        // freeze setting
-        if (freeze)
-            return;
-
         if (Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);

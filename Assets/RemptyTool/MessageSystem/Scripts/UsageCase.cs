@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RemptyTool.ES_MessageSystem;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour
@@ -12,7 +11,6 @@ public class UsageCase : MonoBehaviour
     public TextAsset textAsset;
     public bool triggerd;
     public GameObject messagePanel;
-    private PlayerControl player;
 
     private List<string> textList = new List<string>();
     private int textIndex = 0;
@@ -39,7 +37,6 @@ public class UsageCase : MonoBehaviour
 
         triggerd = false;
         messagePanel.SetActive(false);
-        player = GameObject.Find("Player").GetComponent<PlayerControl>();
 
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
@@ -47,7 +44,6 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("show", show);
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
-        msgSys.AddSpecialCharToFuncMap("slct", select);
     }
 
     private void CustomizedFunction()
@@ -55,11 +51,6 @@ public class UsageCase : MonoBehaviour
         Debug.Log("Hi! This is called by CustomizedFunction!");
     }
 
-    void select()
-    {
-        SceneManager.LoadScene("select");
-    }
- 
     void tmp()
     {
 
@@ -79,14 +70,12 @@ public class UsageCase : MonoBehaviour
     {
         triggerd = false;
         messagePanel.SetActive(false);
-        player.setFreeze(false);
     }
 
     void show()
     {
         triggerd = true;
         messagePanel.SetActive(true);
-        player.setFreeze(true);
     }
 
 

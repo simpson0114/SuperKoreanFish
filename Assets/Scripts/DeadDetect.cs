@@ -12,11 +12,9 @@ public class DeadDetect : MonoBehaviour {
     [Header("UI Settings")]
     public GameObject gamePausePanel;
 
-    private PauseButton pause;
-
 	// Use this for initialization
 	void Start () {
-        pause = GameObject.Find("pause").GetComponent<PauseButton>();
+		
 	}
 	
 	// Update is called once per frame
@@ -31,7 +29,6 @@ public class DeadDetect : MonoBehaviour {
             gamePausePanel.transform.GetChild(3).GetComponent<Text>().text = "game over";
             gamePausePanel.SetActive(true);
             source.PlayOneShot(fallEffect);
-            pause.setFreeze(false);
             Time.timeScale = 0;
         }
         else
