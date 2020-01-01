@@ -1615,8 +1615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 0}
-  SceneName: 
+  effect: {fileID: 1956292736}
+  SceneName: Taichung
 --- !u!1 &1803271101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1820,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862850647}
+--- !u!114 &1956292736 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114625794138928118, guid: 8c76d186ef3d95c4cb1a80349efeb2ae,
+    type: 2}
+  m_PrefabInternal: {fileID: 1131078491}
+  m_Script: {fileID: 11500000, guid: 0e0923ba1e9142f45a7beda2cf234f0c, type: 3}
 --- !u!1 &2144808462
 GameObject:
   m_ObjectHideFlags: 0
