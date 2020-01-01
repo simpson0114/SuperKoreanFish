@@ -11,6 +11,7 @@ public class UsageCase : MonoBehaviour
     public TextAsset textAsset;
     public bool triggerd;
     public GameObject messagePanel;
+    private PlayerControl player;
 
     private List<string> textList = new List<string>();
     private int textIndex = 0;
@@ -37,6 +38,7 @@ public class UsageCase : MonoBehaviour
 
         triggerd = false;
         messagePanel.SetActive(false);
+        player = GameObject.Find("Player").GetComponent<PlayerControl>();
 
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
@@ -70,12 +72,14 @@ public class UsageCase : MonoBehaviour
     {
         triggerd = false;
         messagePanel.SetActive(false);
+        player.setFreeze(false);
     }
 
     void show()
     {
         triggerd = true;
         messagePanel.SetActive(true);
+        player.setFreeze(true);
     }
 
 
