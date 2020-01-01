@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour {
     private Rigidbody2D rb;
     private Animator anime;
     private bool isGrounded;
+    private bool freeze;
 
     [Header("Audio Setting")]
     public AudioSource audioSource;
@@ -15,14 +16,24 @@ public class PlayerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
+        freeze = false;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
 	}
+
+    public void setFreeze(bool ipt)
+    {
+        freeze = ipt;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         anime.SetBool("isMove", false);
         Vector2 v = rb.velocity;
+
+        if (freeze)
+            return;
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);

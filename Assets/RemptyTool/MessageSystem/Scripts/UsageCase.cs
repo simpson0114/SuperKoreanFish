@@ -71,12 +71,14 @@ public class UsageCase : MonoBehaviour
     {
         triggerd = false;
         messagePanel.SetActive(false);
+        GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(false);
     }
 
     void show()
     {
         triggerd = true;
         messagePanel.SetActive(true);
+        GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(true);
     }
 
 
