@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RemptyTool.ES_MessageSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour
 {
     private ES_MessageSystem msgSys;
-    public UnityEngine.UI.Text uiText;
+    public Text uiText;
     public TextAsset textAsset;
     public bool triggerd;
     public GameObject messagePanel;
@@ -28,7 +29,7 @@ public class UsageCase : MonoBehaviour
     void Start()
     {
         msgSys = this.GetComponent<ES_MessageSystem>();
-        if (uiText == null)
+        if (uiText.text == null)
         {
             Debug.LogError("UIText Component not assign.");
         }
@@ -82,7 +83,6 @@ public class UsageCase : MonoBehaviour
     private void ReadTextDataFromAsset(TextAsset _textAsset)
     {
         textList.Clear();
-        textList = new List<string>();
         textIndex = 0;
         var lineTextData = _textAsset.text.Split('\n');
         foreach (string line in lineTextData)
