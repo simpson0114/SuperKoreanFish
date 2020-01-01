@@ -8,9 +8,18 @@ public class PauseButton : MonoBehaviour, IPointerClickHandler {
 
     public GameObject pause;
     public Button tmp;
+    bool freeze;
+
+    public void setFreeze(bool ipt)
+    {
+        freeze = ipt;
+    }
 
     public void OnPointerClick(PointerEventData e)
     {
+        if (freeze)
+            return;
+
         pause.SetActive(!pause.activeSelf);
         if (pause.activeSelf)
         {

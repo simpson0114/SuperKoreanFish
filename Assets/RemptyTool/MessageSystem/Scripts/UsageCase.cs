@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RemptyTool.ES_MessageSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour
@@ -46,6 +47,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("show", show);
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
+        msgSys.AddSpecialCharToFuncMap("slct", select);
     }
 
     private void CustomizedFunction()
@@ -53,6 +55,11 @@ public class UsageCase : MonoBehaviour
         Debug.Log("Hi! This is called by CustomizedFunction!");
     }
 
+    void select()
+    {
+        SceneManager.LoadScene("select");
+    }
+ 
     void tmp()
     {
 
