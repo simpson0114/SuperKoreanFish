@@ -34,7 +34,7 @@ public class FlagRaise : MonoBehaviour {
         if (once)
         {
             once = false;
-            StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "select"));
+            StartCoroutine(effect.Fade(FadeEffect.FadeDirection.In));
         }
     }
 

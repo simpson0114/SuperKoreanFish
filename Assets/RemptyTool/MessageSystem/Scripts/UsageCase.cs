@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RemptyTool.ES_MessageSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour
@@ -45,6 +46,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("show", show);
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
+        msgSys.AddSpecialCharToFuncMap("slct", select);
     }
 
     private void CustomizedFunction()
@@ -81,6 +83,10 @@ public class UsageCase : MonoBehaviour
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(true);
     }
 
+    void select()
+    {
+        SceneManager.LoadScene("select");
+    }
 
     private void ReadTextDataFromAsset(TextAsset _textAsset)
     {
