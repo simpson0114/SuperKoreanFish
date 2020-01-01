@@ -18,7 +18,11 @@ public class UsageCase : MonoBehaviour
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.tag == "Player")
+        {
+            Debug.Log("enter");
+            msgSys.Next();
             triggerd = true;
+        }
     }
 
     void Start()
@@ -36,15 +40,21 @@ public class UsageCase : MonoBehaviour
 
         //add special chars and functions in other component.
         msgSys.AddSpecialCharToFuncMap("UsageCase", CustomizedFunction);
-        msgSys.AddSpecialCharToFuncMap("tmp", tmp);
         msgSys.AddSpecialCharToFuncMap("hide", hide);
         msgSys.AddSpecialCharToFuncMap("show", show);
         msgSys.AddSpecialCharToFuncMap("rst", reset);
+        msgSys.AddSpecialCharToFuncMap("tmp", tmp);
     }
 
     private void CustomizedFunction()
     {
         Debug.Log("Hi! This is called by CustomizedFunction!");
+    }
+
+    void tmp()
+    {
+
+        Debug.Log("test");
     }
 
     void reset()
@@ -55,19 +65,16 @@ public class UsageCase : MonoBehaviour
         Start();
     }
 
-    void tmp()
-    {
-        Debug.Log("show up");
-    }
 
     void hide()
     {
+        triggerd = false;
         messagePanel.SetActive(false);
     }
 
     void show()
     {
-        Debug.Log("show");
+        triggerd = true;
         messagePanel.SetActive(true);
     }
 
@@ -86,7 +93,7 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && triggerd)
         {
             //You can sending the messages from strings or text-based files.
             if (msgSys.IsCompleted)
@@ -95,7 +102,7 @@ public class UsageCase : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && triggerd)
         {
             //Continue the messages, stoping by [w] or [lr] keywords.
             msgSys.Next();
@@ -112,10 +119,6 @@ public class UsageCase : MonoBehaviour
         {
             msgSys.SetText(textList[textIndex]);
             textIndex++;
-        }
-        else if (msgSys.IsCompleted == true)
-        {
-
         }
     }
 }
