@@ -600,7 +600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4164690815044528, guid: 3818123f56c299a4885e7a40473c4c41, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -180.07068
+      value: -172.94
       objectReference: {fileID: 0}
     - target: {fileID: 4164690815044528, guid: 3818123f56c299a4885e7a40473c4c41, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9210,6 +9210,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1720291445}
   - component: {fileID: 1720291444}
+  - component: {fileID: 1720291449}
+  - component: {fileID: 1720291448}
+  - component: {fileID: 1720291447}
+  - component: {fileID: 1720291446}
   m_Layer: 0
   m_Name: "85\u5927\u6A13"
   m_TagString: Untagged
@@ -9274,6 +9278,70 @@ Transform:
   m_Father: {fileID: 1712089389}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720291446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720291443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ca1bef38466fa4bbd2e8131b83a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.01
+--- !u!61 &1720291447
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720291443}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.045421362, y: -0.2049005}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.65, y: 3.25}
+    newSize: {x: 1.65, y: 3.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9036274, y: 3.659801}
+  m_EdgeRadius: 0
+--- !u!114 &1720291448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720291443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc3c18c220b48044980c32f49f0275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 247680626}
+  textAsset: {fileID: 4900000, guid: 5cf4564f34090c1499472e9b1603adb0, type: 3}
+  triggerd: 0
+  messagePanel: {fileID: 1689550445}
+--- !u!114 &1720291449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1720291443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ca1bef38466fa4bbd2e8131b83a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.01
 --- !u!1001 &1932475884
 Prefab:
   m_ObjectHideFlags: 0
