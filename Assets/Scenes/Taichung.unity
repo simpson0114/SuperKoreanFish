@@ -2095,6 +2095,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114820270396372884, guid: a43660ca73fd40149aaae848b5b207fd,
+        type: 2}
+      propertyPath: SceneName
+      value: Taichung
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a43660ca73fd40149aaae848b5b207fd, type: 2}
   m_IsPrefabParent: 0
