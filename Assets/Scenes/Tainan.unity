@@ -936,7 +936,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1245377324}
+      objectReference: {fileID: 520331323}
     - target: {fileID: 114793817958228054, guid: 9dfb7c65fc7fb404abd2b5e4aec90dff,
         type: 2}
       propertyPath: pause
@@ -6618,11 +6618,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214914907}
---- !u!50 &1245377324 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50440825349193030, guid: 1b9abe87c40986d4581bdc6410a620d1,
-    type: 2}
-  m_PrefabInternal: {fileID: 449887163}
 --- !u!1001 &1256366620
 Prefab:
   m_ObjectHideFlags: 0

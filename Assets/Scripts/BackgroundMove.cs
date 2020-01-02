@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class BackgroundMove : MonoBehaviour {
 
-    public Rigidbody2D player;
+    public Transform player;
     public GameObject pause;
 
     public float rate;
     private Rigidbody2D rb;
+    private float prev;
 
 
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody2D>();
+        prev = player.transform.position.x;
         pause.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        float velocity = player.velocity.x * rate;
-        rb.velocity = new Vector3(velocity, 0, 0);
+        float curr = player.transform.position.x;
+        transform.position += new Vector3(curr - prev, 0, 0) * rate;
+        prev = curr;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

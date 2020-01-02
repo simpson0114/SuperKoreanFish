@@ -13,10 +13,13 @@ public class PlayerControl : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip jumpEffect;
 
+    private float stayTime;
+
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
         freeze = false;
+        stayTime = 0;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
 	}
@@ -28,8 +31,8 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(rb.velocity.x);
         anime.SetBool("isMove", false);
-        Vector2 v = rb.velocity;
 
         if (freeze)
             return;
@@ -37,17 +40,17 @@ public class PlayerControl : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, rb.velocity.y);
             anime.SetBool("isMove", true);
         }
         else if(Input.GetKey(KeyCode.A))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, v.y);
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * 200, rb.velocity.y);
             anime.SetBool("isMove", true);
         }
 
-        if (Input.GetKey(KeyCode.W) && isGrounded)
+        if (Input.GetKey(KeyCode.W) && isGrounded && Mathf.RoundToInt(rb.velocity.y) == 0)
         {
             isGrounded = false;
             rb.velocity += new Vector2(0, 5);
@@ -76,6 +79,21 @@ public class PlayerControl : MonoBehaviour {
         {
             isGrounded = false;
             anime.SetBool("isJump", true);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D c)
+    {
+        if (c.collider.tag == "Ground")
+        {
+            Debug.Log("counting");
+            stayTime += Time.deltaTime;
+            if (stayTime >= 0.3)
+            {
+                isGrounded = true;
+                anime.SetBool("isJump", false);
+                stayTime = 0;
+            }
         }
     }
 }
