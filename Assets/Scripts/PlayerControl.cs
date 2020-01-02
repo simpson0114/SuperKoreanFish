@@ -31,7 +31,6 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(rb.velocity.x);
         anime.SetBool("isMove", false);
 
         if (freeze)
@@ -84,9 +83,8 @@ public class PlayerControl : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D c)
     {
-        if (c.collider.tag == "Ground")
+        if (c.collider.tag == "Ground" && !isGrounded)
         {
-            Debug.Log("counting");
             stayTime += Time.deltaTime;
             if (stayTime >= 0.3)
             {
