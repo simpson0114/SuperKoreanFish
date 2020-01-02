@@ -315,8 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc3c18c220b48044980c32f49f0275e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiText: {fileID: 1214914909}
-  textAsset: {fileID: 4900000, guid: 3df67445d37ce244682a6af8a9061dd8, type: 3}
+  uiText: {fileID: 1574453069}
+  textAsset: {fileID: 4900000, guid: 6b3fd12cefdf0724497fc46f64bd54f5, type: 3}
   triggerd: 0
   messagePanel: {fileID: 135605022}
 --- !u!1 &135605022 stripped
@@ -7913,7 +7913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 353761055}
-  textAsset: {fileID: 4900000, guid: 79745aa3e2b057049aa0088fe57a1e04, type: 3}
+  textAsset: {fileID: 4900000, guid: 7f5765ec4227d024da8e8e1536b08375, type: 3}
   triggerd: 0
   messagePanel: {fileID: 135605022}
 --- !u!1 &2072996714
@@ -8004,7 +8004,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.2045252}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8015,7 +8015,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.99, y: 2.06}
+  m_Size: {x: 4.99, y: 1.6509495}
   m_EdgeRadius: 0
 --- !u!114 &2072996718
 MonoBehaviour:
