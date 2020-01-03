@@ -2420,7 +2420,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017808318, y: 0.75735223}
+  m_Offset: {x: -0.030771494, y: 0.75735223}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2431,7 +2431,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9919157, y: 3.3847044}
+  m_Size: {x: 1.1563418, y: 3.3847044}
   m_EdgeRadius: 0
 --- !u!114 &1618018316
 MonoBehaviour:
@@ -2789,6 +2789,8 @@ GameObject:
   - component: {fileID: 1752068326}
   - component: {fileID: 1752068328}
   - component: {fileID: 1752068329}
+  - component: {fileID: 1752068331}
+  - component: {fileID: 1752068330}
   m_Layer: 0
   m_Name: roc flag
   m_TagString: Untagged
@@ -2892,6 +2894,35 @@ EdgeCollider2D:
   m_Points:
   - {x: 1.2848283, y: 10.69264}
   - {x: 1.2593826, y: -0.8517482}
+--- !u!114 &1752068330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752068325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc3c18c220b48044980c32f49f0275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 316885903}
+  textAsset: {fileID: 4900000, guid: e8767f685c70a4d4aa9696061032dd48, type: 3}
+  triggerd: 0
+  messagePanel: {fileID: 1969776054}
+--- !u!114 &1752068331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752068325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ca1bef38466fa4bbd2e8131b83a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.01
 --- !u!1 &1758448237
 GameObject:
   m_ObjectHideFlags: 0
