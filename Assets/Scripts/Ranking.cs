@@ -18,7 +18,7 @@ public class Ranking : MonoBehaviour
     void Start()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/gavesave.save", FileMode.Open);
+        FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
         Save save = (Save)bf.Deserialize(file);
         Rank rank = new Rank();
         file.Close();
