@@ -49,7 +49,6 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
         msgSys.AddSpecialCharToFuncMap("slct", select);
-        msgSys.AddSpecialCharToFuncMap("save", SaveGame);
     }
 
     private void CustomizedFunction()
@@ -69,37 +68,6 @@ public class UsageCase : MonoBehaviour
         textList.Clear();
         textIndex = 0;
         Start();
-    }
-
-    void SaveGame()
-    {
-
-        int index = 0;
-        if (SceneManager.GetActiveScene().name == "game")
-            index = 0;
-        else if (SceneManager.GetActiveScene().name == "Tainan")
-            index = 1;
-        else if (SceneManager.GetActiveScene().name == "Taichung")
-            index = 2;
-        else if (SceneManager.GetActiveScene().name == "TPE")
-            index = 3;
-
-        if (File.Exists(Application.persistentDataPath + "gamesave.save"))
-        {
-            // load save file in
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
-            Save save = (Save)bf.Deserialize(file);
-            file.Close();
-
-            // save
-            save.progress = index;
-            save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
-
-            FileStream output = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Create);
-            bf.Serialize(output, save);
-            output.Close();
-        }
     }
 
 

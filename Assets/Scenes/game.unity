@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 156235410}
   m_Layer: 0
   m_Name: gasoline
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 324184262}
   m_Layer: 0
   m_Name: blueprint
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 926246536}
   m_Layer: 0
   m_Name: items
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9609,7 +9609,7 @@ GameObject:
   - component: {fileID: 1615497152}
   m_Layer: 0
   m_Name: baguette
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
