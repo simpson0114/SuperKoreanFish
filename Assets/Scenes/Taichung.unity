@@ -290,6 +290,11 @@ Prefab:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 114668317069775412, guid: a76a3e34be00e2f46a713501114fc9e6,
+        type: 2}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76a3e34be00e2f46a713501114fc9e6, type: 2}
   m_IsPrefabParent: 0
@@ -336,7 +341,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 576220443}
+      objectReference: {fileID: 1459601667}
     - target: {fileID: 114793817958228054, guid: 9dfb7c65fc7fb404abd2b5e4aec90dff,
         type: 2}
       propertyPath: pause
@@ -4042,6 +4047,11 @@ Transform:
   m_Father: {fileID: 1758399510}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1459601667 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4592058939984082, guid: 2e552c14eea299f4f90aca72ba983573,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889942918}
 --- !u!1 &1491743922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,6 +4380,11 @@ Prefab:
         type: 2}
       propertyPath: right
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114681023711712704, guid: a3a6404c6108cfe44aa8a5ad90f0769f,
+        type: 2}
+      propertyPath: duration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3a6404c6108cfe44aa8a5ad90f0769f, type: 2}
