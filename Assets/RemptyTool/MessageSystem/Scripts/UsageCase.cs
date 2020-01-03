@@ -49,6 +49,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("slct", select);
         msgSys.AddSpecialCharToFuncMap("trans", transformer);
         msgSys.AddSpecialCharToFuncMap("result", result);
+        msgSys.AddSpecialCharToFuncMap("menu", menu);
     }
 
     private void CustomizedFunction()
@@ -59,6 +60,11 @@ public class UsageCase : MonoBehaviour
     void result()
     {
         SceneManager.LoadScene("result");
+    }
+
+    void menu()
+    {
+        SceneManager.LoadScene("menu");
     }
 
     void tmp()
