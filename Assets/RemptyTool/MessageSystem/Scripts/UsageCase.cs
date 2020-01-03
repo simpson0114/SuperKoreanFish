@@ -47,6 +47,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
         msgSys.AddSpecialCharToFuncMap("slct", select);
+        msgSys.AddSpecialCharToFuncMap("trans", transformer);
     }
 
     private void CustomizedFunction()
@@ -58,6 +59,11 @@ public class UsageCase : MonoBehaviour
     {
 
         Debug.Log("test");
+    }
+
+    void transformer()
+    {
+        GameObject.Find("Player").GetComponent<Animator>().SetBool("boost", true);
     }
 
     void reset()
