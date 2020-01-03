@@ -94,8 +94,14 @@ public class UsageCase : MonoBehaviour
         triggerd = false;
         messagePanel.SetActive(false);
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(false);
+
+
         if (tag == "Item")
+        { 
+            AudioClip clip = Resources.Load("Audios/sounds/oneup") as AudioClip;
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(clip);
             Destroy(gameObject);
+        }
     }
 
     void show()
