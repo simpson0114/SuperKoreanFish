@@ -1,4 +1,4 @@
 [l][show]
 嗯...[lr]
 這個難道是統一麵包的味道!?
-[w][hide][destroy]
+[w][hide]

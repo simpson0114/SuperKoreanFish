@@ -76,6 +76,8 @@ public class UsageCase : MonoBehaviour
         triggerd = false;
         messagePanel.SetActive(false);
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(false);
+        if (tag == "Item")
+            Destroy(gameObject);
     }
 
     void show()
