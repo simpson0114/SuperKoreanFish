@@ -11,9 +11,14 @@ public class LevelSelect : MonoBehaviour, IPointerClickHandler {
 
     [Header("Settings")]
     public string SceneName;
+    public AudioClip soundEffect;
+
+    private AudioSource audio;
 
     public void OnPointerClick(PointerEventData e)
     {
+        audio.PlayOneShot(soundEffect);
+
         if (SceneName == "quit")
             Application.Quit();
         else
@@ -26,7 +31,8 @@ public class LevelSelect : MonoBehaviour, IPointerClickHandler {
 	// Use this for initialization
 	void Start () {
         effect = GameObject.Find("fade").GetComponent<FadeEffect>();
-	}
+        audio = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

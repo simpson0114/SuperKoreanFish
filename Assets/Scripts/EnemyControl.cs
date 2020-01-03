@@ -8,15 +8,16 @@ public class EnemyControl : MonoBehaviour {
     private bool dead;
     private Rigidbody2D rb;
     private float wait;
-    private float direction;
+    private int direction;
     private bool freeze;
+    private int choice;
 
 	// Use this for initialization
 	void Start () {
         dead = false;
         freeze = false;
         wait = 0;
-        direction = 1f;
+        direction = 1;
         anime = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 	}
@@ -32,15 +33,19 @@ public class EnemyControl : MonoBehaviour {
         }
         else if (wait <= 0)
         {
-            int choice = Random.Range(0, 5);
+            choice = Random.Range(0, 3);
             Debug.Log("choice " + choice);
+            direction = Random.Range(-1, 1);
+
             if (choice == 0)
             {
-                wait = Random.Range(1, 1.5f);
+                wait = Random.Range(2f, 3f);
+                direction = 0;
             }
             else
             {
-                wait = Random.Range(1.5f, 2f);
+                wait = Random.Range(3.5f, 4f);
+                direction = Random.Range(0, 1) * 2 - 1;
             }
         }
         else if (wait > 0)
@@ -48,7 +53,6 @@ public class EnemyControl : MonoBehaviour {
             transform.position += new Vector3(Time.deltaTime * direction, 0, 0);
             wait -= Time.deltaTime;
         }
-        Debug.Log("wait " + wait);
 	}
 
     public void attacked()
