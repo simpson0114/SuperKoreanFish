@@ -76,7 +76,7 @@ public class FlagRaise : MonoBehaviour {
             file.Close();
 
             // save
-            save.progress = index;
+            save.progress = index + 1;
             save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
 
             FileStream output = File.Create(Application.persistentDataPath + "/gamesave.save");

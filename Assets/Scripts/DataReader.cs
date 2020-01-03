@@ -8,6 +8,8 @@ public class DataReader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        GameObject[] level = { GameObject.Find("Kaohsiung"), GameObject.Find("Tainan"), GameObject.Find("Taichung"), GameObject.Find("Taipei") };
+
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
         Save save = (Save)bf.Deserialize(file);
@@ -18,6 +20,14 @@ public class DataReader : MonoBehaviour {
         for (int i = 0; i < 4; i ++)
         {
             Debug.Log(save.item[i]);
+        }
+
+        for (int i = 0; i < 4; i ++)
+        {
+            if (i <= save.progress)
+                level[i].SetActive(true);
+            else
+                level[i].SetActive(false);
         }
 	}
 	

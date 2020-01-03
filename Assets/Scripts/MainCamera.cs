@@ -33,7 +33,7 @@ public class MainCamera : MonoBehaviour {
         }
         else if (transform.localPosition.x - player.position.x >= 1.25)
         {
-            transform.localPosition += new Vector3(3f * Time.deltaTime, 0, 0);
+            transform.localPosition -= new Vector3(3f * Time.deltaTime, 0, 0);
         }
 
         // transform.localPosition = new Vector3(player.position.x, Mathf.Max(player.position.y + 1.1f, lowerbound), -10);
