@@ -8,17 +8,24 @@ public class Initializer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Save save = new Save();
-        save.progress = 0;
-        for (int i = 0; i < 4; i++)
-            save.item[i] = 0;
+        if (!File.Exists(Application.persistentDataPath + "gavesave.save"))
+        {
+            Save save = new Save();
+            save.progress = 0;
+            for (int i = 0; i < 4; i++)
+                save.item[i] = 0;
 
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
-        bf.Serialize(file, save);
-        file.Close();
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
+            bf.Serialize(file, save);
+            file.Close();
 
-        Debug.Log("data created");
+            Debug.Log("data created");
+        }
+        else
+        {
+            Debug.Log("data exist");
+        }
 	}
 	
 	// Update is called once per frame
