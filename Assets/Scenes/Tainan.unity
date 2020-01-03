@@ -7242,6 +7242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSize: 1
   target: {x: 42.286, y: 0.1, z: 0}
+  soundEffect: {fileID: 8300000, guid: 86d57cecf03bc4683af59f9edd129641, type: 3}
 --- !u!212 &1127906765
 SpriteRenderer:
   m_ObjectHideFlags: 0

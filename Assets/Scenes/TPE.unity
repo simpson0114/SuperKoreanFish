@@ -2902,6 +2902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSize: 1
   target: {x: 52.23, y: 1.107, z: 0}
+  soundEffect: {fileID: 8300000, guid: 86d57cecf03bc4683af59f9edd129641, type: 3}
 --- !u!68 &1752068329
 EdgeCollider2D:
   m_ObjectHideFlags: 0

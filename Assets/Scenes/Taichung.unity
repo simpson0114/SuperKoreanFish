@@ -5555,6 +5555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSize: 1
   target: {x: 20.95692, y: -0.82, z: 0}
+  soundEffect: {fileID: 8300000, guid: 86d57cecf03bc4683af59f9edd129641, type: 3}
 --- !u!61 &1516475972
 BoxCollider2D:
   m_ObjectHideFlags: 0
