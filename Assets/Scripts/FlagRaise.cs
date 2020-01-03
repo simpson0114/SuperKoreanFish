@@ -11,7 +11,6 @@ public class FlagRaise : MonoBehaviour {
     bool raised;
     bool once;
     public Vector3 target;
-    public bool final;
 
     FadeEffect effect;
 
@@ -38,11 +37,8 @@ public class FlagRaise : MonoBehaviour {
 
         if (once)
         {
-            once = false;
-            if (!final)
-                StartCoroutine(effect.Fade(FadeEffect.FadeDirection.In));
-            else
-                StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "result"));
+            once = false;            
+            StartCoroutine(effect.Fade(FadeEffect.FadeDirection.In));
         }
     }
 

@@ -48,11 +48,17 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
         msgSys.AddSpecialCharToFuncMap("slct", select);
         msgSys.AddSpecialCharToFuncMap("trans", transformer);
+        msgSys.AddSpecialCharToFuncMap("result", result);
     }
 
     private void CustomizedFunction()
     {
         Debug.Log("Hi! This is called by CustomizedFunction!");
+    }
+
+    void result()
+    {
+        SceneManager.LoadScene("result");
     }
 
     void tmp()
