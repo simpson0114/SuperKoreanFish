@@ -76,6 +76,8 @@ public class UsageCase : MonoBehaviour
     void transformer()
     {
         GameObject.Find("Player").GetComponent<Animator>().SetBool("boost", true);
+        AudioClip clip = Resources.Load("Audios/sounds/mushroomeat") as AudioClip;
+        GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(clip);
     }
 
     void reset()

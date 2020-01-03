@@ -14,6 +14,7 @@ public class Initializer : MonoBehaviour {
     private float alpha;
     private float oper;
 
+    private AudioSource source;
     private AudioClip clip;
 
 	// Use this for initialization
@@ -23,7 +24,8 @@ public class Initializer : MonoBehaviour {
         alpha = 0;
         oper = 1.0f;
 
-        clip = Resources.Load("") as AudioClip;
+        source = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        clip = Resources.Load("Audios/sounds/coin") as AudioClip;
 
         if (!File.Exists(Application.persistentDataPath + "/gavesave.save"))
         {
@@ -50,6 +52,7 @@ public class Initializer : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            source.PlayOneShot(clip);
             StartCoroutine(GameObject.Find("fade").GetComponent<FadeEffect>().FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));
         }
         
