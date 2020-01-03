@@ -8,7 +8,7 @@ public class Initializer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (!File.Exists(Application.persistentDataPath + "gavesave.save"))
+        if (!File.Exists(Application.persistentDataPath + "/gavesave.save"))
         {
             Save save = new Save();
             save.progress = 0;
