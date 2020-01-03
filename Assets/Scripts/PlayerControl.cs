@@ -103,4 +103,10 @@ public class PlayerControl : MonoBehaviour {
             }
         }
     }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.tag == "Item")
+            item++;
+    }
 }

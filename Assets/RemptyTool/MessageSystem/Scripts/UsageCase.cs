@@ -49,6 +49,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("rst", reset);
         msgSys.AddSpecialCharToFuncMap("tmp", tmp);
         msgSys.AddSpecialCharToFuncMap("slct", select);
+        msgSys.AddSpecialCharToFuncMap("save", SaveGame);
     }
 
     private void CustomizedFunction()
