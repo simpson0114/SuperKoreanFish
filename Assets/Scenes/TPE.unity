@@ -1249,6 +1249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 228802310}
+  upperbound: 0
+  lowerbound: 0
 --- !u!81 &1676984197
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1283,7 +1285,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.392548
+  orthographic size: 3.3735223
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1354,6 +1356,11 @@ Prefab:
     - target: {fileID: 1736929984365952, guid: a76a3e34be00e2f46a713501114fc9e6, type: 2}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668317069775412, guid: a76a3e34be00e2f46a713501114fc9e6,
+        type: 2}
+      propertyPath: duration
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76a3e34be00e2f46a713501114fc9e6, type: 2}
@@ -1507,6 +1514,11 @@ Prefab:
       propertyPath: m_Name
       value: VerticalPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114668317069775412, guid: a76a3e34be00e2f46a713501114fc9e6,
+        type: 2}
+      propertyPath: duration
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a76a3e34be00e2f46a713501114fc9e6, type: 2}
   m_IsPrefabParent: 0
@@ -1553,7 +1565,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 228802310}
+      objectReference: {fileID: 1676984200}
     - target: {fileID: 114793817958228054, guid: 9dfb7c65fc7fb404abd2b5e4aec90dff,
         type: 2}
       propertyPath: pause
