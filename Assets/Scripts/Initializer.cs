@@ -27,9 +27,14 @@ public class Initializer : MonoBehaviour {
             Debug.Log("data exist");
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(GameObject.Find("fade").GetComponent<FadeEffect>().FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));
+            Debug.Log("press");
+        }
+    }
 }
