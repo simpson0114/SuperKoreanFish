@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class Initializer : MonoBehaviour {
+
+    private 
 
 	// Use this for initialization
 	void Start () {
@@ -36,5 +39,6 @@ public class Initializer : MonoBehaviour {
             StartCoroutine(GameObject.Find("fade").GetComponent<FadeEffect>().FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));
             Debug.Log("press");
         }
+        
     }
 }
