@@ -52,6 +52,7 @@ public class FlagRaise : MonoBehaviour {
         if (c.tag == "Player")
         {
             raised = true;
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().Pause();
             GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(soundEffect);
             SaveGame();
         }
