@@ -1139,8 +1139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0248c1906b283ec4ea9c8df7396c7379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 0}
-  SceneName: help
+  effect: {fileID: 1055477253}
+  SceneName: Practice
 --- !u!114 &1349393670
 MonoBehaviour:
   m_ObjectHideFlags: 0
