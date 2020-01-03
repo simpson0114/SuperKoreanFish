@@ -10,7 +10,12 @@ public class FlagRaise : MonoBehaviour {
     public float stepSize;
     bool raised;
     bool once;
+
+    [Header("Moving Setting")]
     public Vector3 target;
+
+    [Header("Audio Clip")]
+    public AudioClip soundEffect;
 
     FadeEffect effect;
 
@@ -47,6 +52,7 @@ public class FlagRaise : MonoBehaviour {
         if (c.tag == "Player")
         {
             raised = true;
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(soundEffect);
             SaveGame();
         }
     }
