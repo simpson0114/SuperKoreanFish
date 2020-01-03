@@ -10,7 +10,7 @@ public class FlagRaise : MonoBehaviour {
     public float stepSize;
     bool raised;
     bool once;
-    public Vector3 target = new Vector3(67.1476f, 1.15f, 0);
+    public Vector3 target;
     public bool final;
 
     FadeEffect effect;
@@ -25,9 +25,9 @@ public class FlagRaise : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (raised && transform.position.y <= 1.15)
+        if (raised && transform.position.y <= target.y)
         {
-            if (transform.position.y >= 1.14)
+            if (transform.position.y >= target.y - 0.01)
             {
                 once = true;
             }
