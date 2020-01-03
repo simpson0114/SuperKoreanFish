@@ -12,14 +12,13 @@ public class Initializer : MonoBehaviour {
     private Text text;
 
     private float alpha;
-    private float target, oper;
+    private float oper;
 
 	// Use this for initialization
 	void Start () {
         text = GameObject.Find("Text").GetComponent<Text>();
 
         alpha = 0;
-        target = 1;
         oper = 1.0f;
 
         if (!File.Exists(Application.persistentDataPath + "/gavesave.save"))
