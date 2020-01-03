@@ -63,6 +63,8 @@ public class FlagRaise : MonoBehaviour {
             index = 2;
         else if (SceneManager.GetActiveScene().name == "TPE")
             index = 3;
+        else if (SceneManager.GetActiveScene().name == "practice")
+            index = -1;
 
         if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
         {
@@ -73,14 +75,20 @@ public class FlagRaise : MonoBehaviour {
             file.Close();
 
             // save
-            save.progress = Mathf.Min(index + 1, 3);
-            save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
+            if (index != -1)
+            {
+                save.progress = Mathf.Min(index + 1, 3);
+                save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
 
-            FileStream output = File.Create(Application.persistentDataPath + "/gamesave.save");
-            bf.Serialize(output, save);
-            output.Close();
-            Debug.Log("game save index" + index + "+" + save.item[index]);
-        }
-        
+                FileStream output = File.Create(Application.persistentDataPath + "/gamesave.save");
+                bf.Serialize(output, save);
+                output.Close();
+                Debug.Log("game save index" + index + "+" + save.item[index]);
+            }
+            else
+            {
+                Debug.Log("remain same");
+            }
+        }        
     }
 }
