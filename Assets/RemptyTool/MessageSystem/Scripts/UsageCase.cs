@@ -4,6 +4,8 @@ using UnityEngine;
 using RemptyTool.ES_MessageSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour
@@ -66,6 +68,37 @@ public class UsageCase : MonoBehaviour
         textList.Clear();
         textIndex = 0;
         Start();
+    }
+
+    void SaveGame()
+    {
+
+        int index = 0;
+        if (SceneManager.GetActiveScene().name == "game")
+            index = 0;
+        else if (SceneManager.GetActiveScene().name == "Tainan")
+            index = 1;
+        else if (SceneManager.GetActiveScene().name == "Taichung")
+            index = 2;
+        else if (SceneManager.GetActiveScene().name == "TPE")
+            index = 3;
+
+        if (File.Exists(Application.persistentDataPath + "gamesave.save"))
+        {
+            // load save file in
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
+            Save save = (Save)bf.Deserialize(file);
+            file.Close();
+
+            // save
+            save.progress = index;
+            save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
+
+            FileStream output = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Create);
+            bf.Serialize(output, save);
+            output.Close();
+        }
     }
 
 

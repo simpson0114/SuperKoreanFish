@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour {
 
     private float stayTime;
 
+    private int item;
+
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
@@ -22,11 +24,18 @@ public class PlayerControl : MonoBehaviour {
         stayTime = 0;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
+
+        item = 0;
 	}
 
     public void setFreeze(bool ipt)
     {
         freeze = ipt;
+    }
+
+    public int GetItem()
+    {
+        return item;
     }
 	
 	// Update is called once per frame
