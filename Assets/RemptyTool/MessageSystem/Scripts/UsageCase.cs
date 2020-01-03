@@ -4,8 +4,6 @@ using UnityEngine;
 using RemptyTool.ES_MessageSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 [RequireComponent(typeof(ES_MessageSystem))]
 public class UsageCase : MonoBehaviour

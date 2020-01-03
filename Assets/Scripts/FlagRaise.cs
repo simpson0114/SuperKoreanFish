@@ -25,13 +25,14 @@ public class FlagRaise : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (raised && transform.position.y <= target.y)
+        if (raised && transform.localPosition.y <= target.y)
         {
-            if (transform.position.y >= target.y - 0.01)
+            if (transform.localPosition.y >= target.y - 0.01)
             {
                 once = true;
             }
-            transform.position = Vector3.MoveTowards(transform.position, target, stepSize * Time.deltaTime);
+            Debug.Log("moving");
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, stepSize * Time.deltaTime);
            
         }
 
@@ -76,7 +77,7 @@ public class FlagRaise : MonoBehaviour {
             file.Close();
 
             // save
-            save.progress = index + 1;
+            save.progress = Mathf.Min(index + 1, 3);
             save.item[index] = GameObject.Find("Player").GetComponent<PlayerControl>().GetItem();
 
             FileStream output = File.Create(Application.persistentDataPath + "/gamesave.save");
