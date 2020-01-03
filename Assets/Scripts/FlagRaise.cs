@@ -10,7 +10,8 @@ public class FlagRaise : MonoBehaviour {
     public float stepSize;
     bool raised;
     bool once;
-    Vector3 target = new Vector3(67.1476f, 1.15f, 0);
+    public Vector3 target = new Vector3(67.1476f, 1.15f, 0);
+    public bool final;
 
     FadeEffect effect;
 
@@ -37,7 +38,10 @@ public class FlagRaise : MonoBehaviour {
         if (once)
         {
             once = false;
-            StartCoroutine(effect.Fade(FadeEffect.FadeDirection.In));
+            if (!final)
+                StartCoroutine(effect.Fade(FadeEffect.FadeDirection.In));
+            else
+                StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "result"));
         }
     }
 

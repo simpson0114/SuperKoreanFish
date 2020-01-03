@@ -85,6 +85,8 @@ public class UsageCase : MonoBehaviour
         triggerd = true;
         messagePanel.SetActive(true);
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(true);
+        if (tag == "Item")
+            GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     void select()
