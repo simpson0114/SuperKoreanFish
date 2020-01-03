@@ -7,10 +7,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class Initializer : MonoBehaviour {
 
-    private 
+    public float fadeSpeed;
+
+    private Text text;
+
+    private float alpha;
+    private float target, oper;
 
 	// Use this for initialization
 	void Start () {
+        text = GameObject.Find("Text").GetComponent<Text>();
+
+        alpha = 0;
+        target = 1;
+        oper = 1.0f;
+
         if (!File.Exists(Application.persistentDataPath + "/gavesave.save"))
         {
             Save save = new Save();
@@ -37,8 +48,15 @@ public class Initializer : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(GameObject.Find("fade").GetComponent<FadeEffect>().FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));
-            Debug.Log("press");
         }
+        
+        text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
+
+        alpha += oper * Time.deltaTime;
+        if (alpha >= 1)
+            oper = -1;
+        else if (alpha <= 0)
+            oper = 1;
         
     }
 }

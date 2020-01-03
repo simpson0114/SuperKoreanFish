@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9932763956726ce4ab029ec0047f0883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 1
 --- !u!1 &335984235
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +244,6 @@ GameObject:
   m_Component:
   - component: {fileID: 335984236}
   - component: {fileID: 335984238}
-  - component: {fileID: 335984239}
   - component: {fileID: 335984237}
   m_Layer: 5
   m_Name: Text
@@ -268,7 +268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -216}
+  m_AnchoredPosition: {x: 0, y: 238}
   m_SizeDelta: {x: 2218.9, y: 172.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335984237
@@ -311,19 +311,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335984235}
   m_CullTransparentMesh: 0
---- !u!114 &335984239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335984235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e0923ba1e9142f45a7beda2cf234f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 0.8
 --- !u!224 &338008359 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224904198781301892, guid: 8c76d186ef3d95c4cb1a80349efeb2ae,
@@ -594,6 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9932763956726ce4ab029ec0047f0883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 0
 --- !u!1 &2128718354
 GameObject:
   m_ObjectHideFlags: 0
