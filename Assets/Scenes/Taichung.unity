@@ -140,12 +140,12 @@ PrefabInstance:
     - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 148.6
+      value: 110.4
       objectReference: {fileID: 0}
     - target: {fileID: 224295868507848060, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 508.2
+      value: 584.7
       objectReference: {fileID: 0}
     - target: {fileID: 224397744760157264, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 224397744760157264, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224397744760157264, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
@@ -477,8 +477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.59999, y: -21.225}
-  m_SizeDelta: {x: 508.2, y: 180.45}
+  m_AnchoredPosition: {x: 110.4, y: -21.225}
+  m_SizeDelta: {x: 584.7, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &444919961
 PrefabInstance:
@@ -678,8 +678,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.59999, y: -21.225}
-  m_SizeDelta: {x: 508.2, y: 180.45}
+  m_AnchoredPosition: {x: 110.4, y: -21.225}
+  m_SizeDelta: {x: 584.7, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692281980
 MonoBehaviour:
@@ -4157,8 +4157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.6, y: -16.206}
-  m_SizeDelta: {x: 508.2, y: 167.46}
+  m_AnchoredPosition: {x: 110.4, y: -16.206}
+  m_SizeDelta: {x: 584.7, y: 167.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &993366814
 CanvasRenderer:
@@ -4247,7 +4247,7 @@ PrefabInstance:
     - target: {fileID: 224904198781301892, guid: 8c76d186ef3d95c4cb1a80349efeb2ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224904198781301892, guid: 8c76d186ef3d95c4cb1a80349efeb2ae,
         type: 3}
@@ -4439,8 +4439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.59999, y: -21.225}
-  m_SizeDelta: {x: 508.2, y: 180.45}
+  m_AnchoredPosition: {x: 110.4, y: -21.225}
+  m_SizeDelta: {x: 584.7, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186930821
 MonoBehaviour:
@@ -5468,11 +5468,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f6828b0ea417d44c79d70ce463255eee, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
