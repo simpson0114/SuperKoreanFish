@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 570236576}
   - component: {fileID: 570236579}
   - component: {fileID: 570236578}
+  - component: {fileID: 570236580}
   m_Layer: 0
   m_Name: "\u55B5\u89BD"
   m_TagString: Untagged
@@ -538,10 +539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc3c18c220b48044980c32f49f0275e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiText: {fileID: 0}
-  textAsset: {fileID: 0}
+  uiText: {fileID: 778212121}
+  textAsset: {fileID: 4900000, guid: b96b6a9ea07348f4faa9952f85a1b9e4, type: 3}
   triggerd: 0
-  messagePanel: {fileID: 0}
+  messagePanel: {fileID: 1969776054}
 --- !u!114 &570236579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +556,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeed: 0.01
+--- !u!61 &570236580
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570236575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.7628244, y: 1.240872}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.92, y: 1.89}
+    newSize: {x: 1.92, y: 1.89}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.83345294, y: 0.94027066}
+  m_EdgeRadius: 0
 --- !u!1001 &753022530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,6 +760,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778212121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+    type: 3}
+  m_PrefabInstance: {fileID: 1343980077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &936540165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1342,6 +1381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 224397744760157264, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1446,6 +1490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224854204666836320, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -388
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c5648ca85f7a5442ae80ce37b4b6200, type: 3}
@@ -1930,7 +1979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752068325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.23, y: -1.4, z: -1.6181654}
+  m_LocalPosition: {x: 52.23, y: -1.367, z: -1.6181654}
   m_LocalScale: {x: 0.27133694, y: 0.26353702, z: 0.5677322}
   m_Children: []
   m_Father: {fileID: 354334412}
@@ -1949,7 +1998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepSize: 1
-  target: {x: 67.1476, y: 1.15, z: 0}
+  target: {x: 52.23, y: 1.107, z: 0}
   final: 0
 --- !u!68 &1752068329
 EdgeCollider2D:
@@ -2075,6 +2124,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dfb7c65fc7fb404abd2b5e4aec90dff, type: 3}
+--- !u!1 &1969776054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1644404169256080, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+    type: 3}
+  m_PrefabInstance: {fileID: 1343980077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054609948
 GameObject:
   m_ObjectHideFlags: 0
