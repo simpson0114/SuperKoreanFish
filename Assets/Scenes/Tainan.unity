@@ -8147,7 +8147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 397505929}
-  textAsset: {fileID: 4900000, guid: faddacb5f0318e743b37f60b0ac2318d, type: 3}
+  textAsset: {fileID: 4900000, guid: 267b146fec0678441b48c0315334a28c, type: 3}
   triggerd: 0
   messagePanel: {fileID: 135605022}
 --- !u!114 &1758817712
