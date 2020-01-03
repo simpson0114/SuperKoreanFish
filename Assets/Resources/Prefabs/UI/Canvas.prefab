@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 1196846195539682}
-  tmp: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!114 &114291735750873832
 MonoBehaviour:
   m_ObjectHideFlags: 0
