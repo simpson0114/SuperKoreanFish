@@ -253,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
   SceneName: TPE
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1 &473566813
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
   SceneName: Tainan
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1 &897877658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
   SceneName: game
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1 &1351571323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
   SceneName: menu
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!114 &1500150528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,6 +1725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 1956292736}
   SceneName: Taichung
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1 &1803271101
 GameObject:
   m_ObjectHideFlags: 0

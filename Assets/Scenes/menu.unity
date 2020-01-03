@@ -477,6 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 0}
   SceneName: quit
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1001 &777796955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 1055477253}
   SceneName: select
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!1 &1005917452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 1055477253}
   SceneName: Practice
+  soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!114 &1349393670
 MonoBehaviour:
   m_ObjectHideFlags: 0
