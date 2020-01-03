@@ -16,6 +16,7 @@ public class UsageCase : MonoBehaviour
 
     private List<string> textList = new List<string>();
     private int textIndex = 0;
+    private GameObject sora;
 
     void OnTriggerEnter2D(Collider2D c)
     {
@@ -50,6 +51,7 @@ public class UsageCase : MonoBehaviour
         msgSys.AddSpecialCharToFuncMap("trans", transformer);
         msgSys.AddSpecialCharToFuncMap("result", result);
         msgSys.AddSpecialCharToFuncMap("menu", menu);
+        msgSys.AddSpecialCharToFuncMap("citi", citizen);
     }
 
     private void CustomizedFunction()
@@ -60,6 +62,13 @@ public class UsageCase : MonoBehaviour
     void result()
     {
         SceneManager.LoadScene("result");
+    }
+
+    void citizen()
+    {
+        GameObject.Find("KoreanFish").SetActive(false);
+        sora.SetActive(true);
+        uiText.transform.localPosition = new Vector3(-67, uiText.transform.localPosition.y);
     }
 
     void menu()
@@ -108,6 +117,9 @@ public class UsageCase : MonoBehaviour
     {
         triggerd = true;
         messagePanel.SetActive(true);
+        sora = GameObject.Find("Sora");
+        if (sora != null)
+            sora.SetActive(false);
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(true);    
         GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
