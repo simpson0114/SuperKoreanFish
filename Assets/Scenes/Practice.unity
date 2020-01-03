@@ -4208,6 +4208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 114156723102276208, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_Text

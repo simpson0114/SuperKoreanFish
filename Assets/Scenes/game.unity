@@ -1068,7 +1068,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSize: 1
   target: {x: -418.6127, y: -165.21, z: -10.75712}
-  final: 0
 --- !u!114 &450703016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11498,6 +11497,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 394787425}
     m_Modifications:
+    - target: {fileID: 114156723102276208, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 114177898385556968, guid: 9c5648ca85f7a5442ae80ce37b4b6200,
         type: 3}
       propertyPath: m_FontData.m_FontSize
