@@ -14,12 +14,16 @@ public class Initializer : MonoBehaviour {
     private float alpha;
     private float oper;
 
+    private AudioClip clip;
+
 	// Use this for initialization
 	void Start () {
         text = GameObject.Find("Text").GetComponent<Text>();
 
         alpha = 0;
         oper = 1.0f;
+
+        clip = Resources.Load("") as AudioClip;
 
         if (!File.Exists(Application.persistentDataPath + "/gavesave.save"))
         {

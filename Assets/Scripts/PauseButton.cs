@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseButton : MonoBehaviour, IPointerClickHandler {
 
     public GameObject pause;
-    public Button tmp;
+    public AudioClip soundEffect;
 
     private bool freeze;
 
@@ -20,6 +20,8 @@ public class PauseButton : MonoBehaviour, IPointerClickHandler {
     {
         if (freeze)
             return;
+
+        GameObject.Find("Audio Source").GetComponent<AudioSource>().PlayOneShot(soundEffect);
 
         pause.SetActive(!pause.activeSelf);
         if (pause.activeSelf)
