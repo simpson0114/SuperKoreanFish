@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpecialThanks : MonoBehaviour
-{    bool raised;    bool once;    float buffer;    [Header("Moving Setting")]
+{    bool once;    float buffer;    [Header("Moving Setting")]
     public float stepSize;
     public Vector3 target;
 
@@ -12,7 +12,6 @@ public class SpecialThanks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        raised = false;
         once = false;
         buffer = 0;
         effect = GameObject.Find("fade").GetComponent<FadeEffect>();
@@ -21,14 +20,19 @@ public class SpecialThanks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (buffer <= 3)
+        if (buffer <= 3 && !once)
         {
             buffer += Time.deltaTime;
             return;
         }
 
-        if (raised && transform.localPosition.y >= target.y)        {            if (transform.localPosition.y <= target.y + 0.01)            {                once = true;            }            Debug.Log("moving list");            transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, stepSize * Time.deltaTime);
-        }        if (once)        {            once = false;
-            StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));        }
+        if (transform.localPosition.y <= target.y)        {            if (transform.localPosition.y >= target.y - 0.01 && !once)            {                once = true;                buffer = 0;            }            transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, stepSize * Time.deltaTime);
+        }        if (once)        {            if (buffer <= 5)
+            {
+                buffer += Time.deltaTime;
+                Debug.Log(buffer);
+            }
+            else
+                StartCoroutine(effect.FadeAndLoadScene(FadeEffect.FadeDirection.In, "menu"));        }
     }
 }
