@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour {
     public AudioClip jumpEffect;
 
     private float stayTime;
-    private AudioClip hit;
+    private AudioClip hit, attack;
 
     private int item;
 
@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
         hit = Resources.Load("Audios/sounds/death") as AudioClip;
+        attack = Resources.Load("Audios/sounds/stomp") as AudioClip;
 
         item = 0;
 	}
@@ -77,9 +78,18 @@ public class PlayerControl : MonoBehaviour {
         }
         else if (c.collider.tag == "Enemy" && rb.velocity.y < 0 && !isGrounded)
         {
-            isGrounded = true;
-            anime.SetBool("isJump", false);
-            c.collider.gameObject.GetComponent<EnemyControl>().attacked();
+            if (rb.velocity.y < 0 && !isGrounded)
+            {
+                isGrounded = true;
+                anime.SetBool("isJump", false);
+                audioSource.PlayOneShot(attack);
+                c.collider.gameObject.GetComponent<EnemyControl>().attacked();
+            }
+
+            if (c.collider.tag == "Player" && !GameObject.Find("Enenmy").GetComponent<EnemyControl>().isDead())
+            {
+                attacked();
+            }
         }
     }
     
