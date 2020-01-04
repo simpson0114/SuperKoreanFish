@@ -5030,6 +5030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114820270396372884, guid: a43660ca73fd40149aaae848b5b207fd,
+        type: 3}
+      propertyPath: SceneName
+      value: Practice
+      objectReference: {fileID: 0}
     - target: {fileID: 224164786676670078, guid: a43660ca73fd40149aaae848b5b207fd,
         type: 3}
       propertyPath: m_LocalPosition.x
