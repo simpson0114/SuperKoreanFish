@@ -26,15 +26,20 @@ public class DeadDetect : MonoBehaviour {
     {
         if (c.tag == "Player")
         {
-            gamePausePanel.transform.GetChild(3).GetComponent<Text>().text = "game over";
-            gamePausePanel.SetActive(true);
-            source.Stop();
-            source.PlayOneShot(fallEffect);
-            GameObject.Find("pause").GetComponent<PauseButton>().setFreeze(true);
-            GameObject.Find("Background").GetComponent<BackgroundMove>().setFreeze(true);
-            Time.timeScale = 0;
+            GameOver(fallEffect);
         }
         else
             Destroy(c.gameObject);
+    }
+
+    public void GameOver(AudioClip clip)
+    {
+        gamePausePanel.transform.GetChild(3).GetComponent<Text>().text = "game over";
+        gamePausePanel.SetActive(true);
+        source.Stop();
+        source.PlayOneShot(clip);
+        GameObject.Find("pause").GetComponent<PauseButton>().setFreeze(true);
+        GameObject.Find("Background").GetComponent<BackgroundMove>().setFreeze(true);
+        Time.timeScale = 0;
     }
 }

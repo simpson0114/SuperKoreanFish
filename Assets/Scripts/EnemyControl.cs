@@ -73,4 +73,12 @@ public class EnemyControl : MonoBehaviour {
     {
         freeze = ipt;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            GameObject.Find("Player").GetComponent<PlayerControl>().attacked();
+        }
+    }
 }

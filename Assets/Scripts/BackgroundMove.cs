@@ -35,14 +35,20 @@ public class BackgroundMove : MonoBehaviour {
             if (freeze)
                 return;
 
-            source.PlayOneShot(clip);
             pause.SetActive(!pause.activeSelf);
             if (pause.activeSelf)
+            {
                 Time.timeScale = 0;
+                source.Pause();
+            }
             else
+            {
                 Time.timeScale = 1;
+                source.UnPause();
+            }
+            source.PlayOneShot(clip);
         }
-	}
+    }
 
     public void setFreeze(bool ipt)
     {

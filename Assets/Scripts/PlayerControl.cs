@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour {
     public AudioClip jumpEffect;
 
     private float stayTime;
+    private AudioClip hit;
 
     private int item;
 
@@ -24,6 +25,7 @@ public class PlayerControl : MonoBehaviour {
         stayTime = 0;
         rb = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
+        hit = Resources.Load("Audios/sounds/death") as AudioClip;
 
         item = 0;
 	}
@@ -108,5 +110,10 @@ public class PlayerControl : MonoBehaviour {
     {
         if (c.tag == "Item")
             item++;
+    }
+
+    public void attacked()
+    {
+        GameObject.Find("DeadDetect").GetComponent<DeadDetect>().GameOver(hit);
     }
 }
