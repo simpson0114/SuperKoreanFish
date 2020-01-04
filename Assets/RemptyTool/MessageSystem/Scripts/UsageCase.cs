@@ -16,7 +16,7 @@ public class UsageCase : MonoBehaviour
 
     private List<string> textList = new List<string>();
     private int textIndex = 0;
-    private GameObject sora;
+    private GameObject sora, fish;
 
     void OnTriggerEnter2D(Collider2D c)
     {
@@ -101,6 +101,7 @@ public class UsageCase : MonoBehaviour
     void hide()
     {
         triggerd = false;
+        fish.SetActive(true);
         messagePanel.SetActive(false);
         GameObject.Find("Player").GetComponent<PlayerControl>().setFreeze(false);
 
@@ -117,6 +118,7 @@ public class UsageCase : MonoBehaviour
     {
         triggerd = true;
         messagePanel.SetActive(true);
+        fish = GameObject.Find("KoreanFish");
         sora = GameObject.Find("Sora");
         if (sora != null)
             sora.SetActive(false);
