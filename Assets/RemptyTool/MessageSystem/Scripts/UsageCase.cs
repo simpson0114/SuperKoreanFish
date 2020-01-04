@@ -144,6 +144,7 @@ public class UsageCase : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.S) && triggerd)
         {
             //You can sending the messages from strings or text-based files.
@@ -152,6 +153,7 @@ public class UsageCase : MonoBehaviour
                 msgSys.SetText("Send the messages![lr] HelloWorld![w]");
             }
         }
+        */
 
         if (Input.GetKeyDown(KeyCode.Space) && triggerd)
         {
