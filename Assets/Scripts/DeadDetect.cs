@@ -14,7 +14,7 @@ public class DeadDetect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -28,8 +28,10 @@ public class DeadDetect : MonoBehaviour {
         {
             gamePausePanel.transform.GetChild(3).GetComponent<Text>().text = "game over";
             gamePausePanel.SetActive(true);
+            source.Stop();
             source.PlayOneShot(fallEffect);
             GameObject.Find("pause").GetComponent<PauseButton>().setFreeze(true);
+            GameObject.Find("Background").GetComponent<BackgroundMove>().setFreeze(true);
             Time.timeScale = 0;
         }
         else

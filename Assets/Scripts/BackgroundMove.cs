@@ -10,12 +10,18 @@ public class BackgroundMove : MonoBehaviour {
     public float rate;
     private Rigidbody2D rb;
     private float prev;
+    private AudioSource source;
+    private AudioClip clip;
+    private bool freeze;
 
 
 	// Use this for initialization
 	void Start () {
+        freeze = false;
         prev = player.transform.position.x;
         pause.SetActive(false);
+        source = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        clip = Resources.Load("Audios/sounds/coin") as AudioClip;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +32,10 @@ public class BackgroundMove : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (freeze)
+                return;
+
+            source.PlayOneShot(clip);
             pause.SetActive(!pause.activeSelf);
             if (pause.activeSelf)
                 Time.timeScale = 0;
@@ -33,4 +43,9 @@ public class BackgroundMove : MonoBehaviour {
                 Time.timeScale = 1;
         }
 	}
+
+    public void setFreeze(bool ipt)
+    {
+        freeze = ipt;
+    }
 }
