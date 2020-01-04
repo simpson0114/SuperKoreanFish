@@ -76,7 +76,7 @@ public class PlayerControl : MonoBehaviour {
             isGrounded = true;
             anime.SetBool("isJump", false);
         }
-        else if (c.collider.tag == "Enemy" && rb.velocity.y < 0 && !isGrounded)
+        else if (c.collider.tag == "Enemy")
         {
             if (rb.velocity.y < 0 && !isGrounded)
             {
@@ -85,8 +85,7 @@ public class PlayerControl : MonoBehaviour {
                 audioSource.PlayOneShot(attack);
                 c.collider.gameObject.GetComponent<EnemyControl>().attacked();
             }
-
-            if (c.collider.tag == "Player" && !GameObject.Find("Enenmy").GetComponent<EnemyControl>().isDead())
+            else if (!c.collider.gameObject.GetComponent<EnemyControl>().isDead())
             {
                 attacked();
             }
@@ -123,7 +122,10 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public void attacked()
-    {
+    { 
+        setFreeze(true);
+        GameObject.Find("pause").GetComponent<PauseButton>().setFreeze(true);
+        GameObject.Find("Enemy").GetComponent<EnemyControl>().setFreeze(true);
         GameObject.Find("DeadDetect").GetComponent<DeadDetect>().GameOver(hit);
     }
 }
