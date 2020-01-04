@@ -70,7 +70,7 @@ public class FlagRaise : MonoBehaviour {
             index = 2;
         else if (SceneManager.GetActiveScene().name == "TPE")
             index = 3;
-        else if (SceneManager.GetActiveScene().name == "practice")
+        else if (SceneManager.GetActiveScene().name == "Practice")
             index = -1;
 
         if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
