@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 572280420}
-  SceneName: menu
+  SceneName: ending
   soundEffect: {fileID: 8300000, guid: 4fec4f088182e4b25bc3fba290452543, type: 3}
 --- !u!114 &157787893
 MonoBehaviour:

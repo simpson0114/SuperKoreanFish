@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Practice.unity
     guid: fb8000475bd48b0459f673ce9b04bcf9
+  - enabled: 1
+    path: Assets/Scenes/ending.unity
+    guid: 6a64e7df16f9f204c808343121c84705
   m_configObjects: {}

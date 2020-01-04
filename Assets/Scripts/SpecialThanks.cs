@@ -20,7 +20,7 @@ public class SpecialThanks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (buffer <= 3 && !once)
+        if (buffer <= 3.5 && !once)
         {
             buffer += Time.deltaTime;
             return;
