@@ -8,7 +8,7 @@ using UnityEngine.UI;
 [SerializeField]
 public class Rank
 {
-    static public string[] rank = { "F", "A", "B", "S" };
+    static public string[] rank = { "F", "B", "A", "S" };
     static public string[] comment = { "韓黑", "韓粉", "狂熱韓粉", "鋼鐵韓粉" };
     public AudioClip[] audios = new AudioClip[4];
 }
